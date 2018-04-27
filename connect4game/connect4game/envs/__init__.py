@@ -1,0 +1,1 @@
+from connect4game.envs.connect4game import Connect4GameEnv
