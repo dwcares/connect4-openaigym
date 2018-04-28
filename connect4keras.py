@@ -11,7 +11,8 @@ from rl.policy import BoltzmannQPolicy
 from rl.memory import SequentialMemory
 
 
-ENV_NAME = 'CartPoleCenter-v0'
+ENV_NAME = 'Connect4-v0'
+
 
 # Get the environment and extract the number of actions.
 env = gym.make(ENV_NAME)
@@ -22,10 +23,6 @@ nb_actions = env.action_space.n
 # Next, we build a very simple model.
 model = Sequential()
 model.add(Flatten(input_shape=(1,) + env.observation_space.shape))
-model.add(Dense(16))
-model.add(Activation('relu'))
-model.add(Dense(16))
-model.add(Activation('relu'))
 model.add(Dense(16))
 model.add(Activation('relu'))
 model.add(Dense(16))
